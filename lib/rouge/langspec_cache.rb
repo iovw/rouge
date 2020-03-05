@@ -344,6 +344,14 @@ module Rouge
     @detectable = false
   end
 
+  Lexer.cache :ECL, "ecl" do
+    @title = "ECL"
+    @desc = "Enterprise Control Language (hpccsystems.com)"
+    @filenames = ["*.ecl"]
+    @mimetypes = ["application/x-ecl"]
+    @detectable = false
+  end
+
   Lexer.cache :EEX, "eex" do
     @title = "EEX"
     @desc = "Embedded Elixir"
@@ -960,6 +968,7 @@ module Rouge
     @title = "Nasm"
     @desc = "Netwide Assembler"
     @filenames = ["*.asm"]
+    @mimetypes = ["text/x-nasm"]
     @detectable = false
   end
 
@@ -1519,6 +1528,15 @@ module Rouge
     @desc = "A programming language similar to csharp."
     @filenames = ["*.vala"]
     @mimetypes = ["text/x-vala"]
+    @detectable = false
+  end
+
+  Lexer.cache :Varnish, "varnish" do
+    @title = "Varnish"
+    @desc = "The Varnish (high-performance web accelerator) configuration language"
+    @aliases = ["varnishconf", "VCL"]
+    @filenames = ["*.vcl"]
+    @mimetypes = ["text/x-varnish"]
     @detectable = false
   end
 
